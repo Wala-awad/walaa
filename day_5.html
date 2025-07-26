@@ -1,0 +1,40 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head><title>Day 5 Lesson</title></head>
+    <body>
+    <h1>Day 5 Lesson</h1>
+    <p>Access your updated lesson here:</p>
+    <a href="https://test-english.com/grammar-points/b1/defining-and-non-defining-relative-clauses/" target="_blank">https://test-english.com/grammar-points/b1/defining-and-non-defining-relative-clauses/</a>
+    
+        
+        <script>window.onload = function(){loadLessonProgress(5);};</script>
+        <script>
+        function showMotivation(day) {
+            const messages = [
+                "Great job, Dr. Mai! Keep going!",
+                "Excellent work! You're making progress!",
+                "You're doing amazing, keep up the great work!",
+                "Fantastic! Another step towards fluency!",
+                "Bravo! Every lesson counts!"
+            ];
+            const message = messages[Math.floor(Math.random() * messages.length)];
+            alert(message + " You have completed Day " + day + ".");
+        }
+        function updateLessonProgress(day) {
+            const checkbox = document.getElementById("lessonCheck_" + day);
+            if (checkbox.checked) {
+                localStorage.setItem("lesson_" + day, "1");
+                showMotivation(day);
+            } else {
+                localStorage.setItem("lesson_" + day, "0");
+            }
+        }
+        function loadLessonProgress(day) {
+            const status = localStorage.getItem("lesson_" + day);
+            if (status === "1") {
+                document.getElementById("lessonCheck_" + day).checked = true;
+            }
+        }
+        </script>
+        <script>window.onload = function(){loadLessonProgress(5);};</script></body></html>

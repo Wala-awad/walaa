@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate of Completion</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .certificate-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .certificate-container h2 {
+            color: #ff5e62;
+        }
+        .certificate-container a button {
+            background-color: #00b09b;
+            padding: 10px 20px;
+            border: none;
+            color: white;
+            font-size: 1.2em;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .certificate-container a button:hover {
+            background-color: #96c93d;
+        }
+        #dateField {
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body onload="checkCompletion(); setCertificateDate();">
+    <header>
+        <h1>Certificate of Completion</h1>
+    </header>
+    <main>
+        <div class="certificate-container">
+            <h2>Congratulations Dr. Mai!</h2>
+            <p>You have completed all 30 lessons of the B1 English Course.</p>
+            <p>Your certificate date: <span id="dateField"></span></p>
+            <a href="certificate.pdf" download><button>Download Your Certificate</button></a>
+        </div>
+        <p style="text-align:center;"><a href="index.html">Back to Main Page</a></p>
+    </main>
+    <footer>
+        <p>&copy; 2025 Dr. Mai's B1 English Course</p>
+    </footer>
+    <script>
+        function checkCompletion() {
+            let total = 30;
+            let completed = 0;
+            for (let i = 1; i <= total; i++) {
+                if (localStorage.getItem("lesson_" + i) === "1") {
+                    completed++;
+                }
+            }
+            if (completed < total) {
+                alert("You must complete all 30 lessons to access the certificate.");
+                window.location.href = "index.html";
+            }
+        }
+        function setCertificateDate() {
+            const today = new Date();
+            const dateStr = today.toLocaleDateString();
+            document.getElementById("dateField").textContent = dateStr;
+        }
+    </script>
+</body>
+</html>

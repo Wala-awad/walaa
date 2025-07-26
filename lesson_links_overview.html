@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson Links Overview</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Lesson Links Overview</h1>
+        <p>Quick access to all 30 lessons with verified links.</p>
+    </header>
+    
+<main>
+    <input type="text" id="searchBox" onkeyup="searchLessons()" placeholder="Search lessons..." style="width:100%;padding:10px;margin-bottom:20px;font-size:16px;">
+    <div id="progressText" style="margin:10px 0; font-weight:bold;">0 / 30 lessons completed</div>
+    <div style="width:100%;background:#ddd;border-radius:20px;height:25px;margin-bottom:20px;">
+        <div id="progressBar" style="height:25px;width:0;background:linear-gradient(to right, #00b09b, #96c93d);border-radius:20px;"></div>
+    </div>
+    <ul id="lessonList">
+
+<li><input type="checkbox" class="lesson-check" onclick="updateProgress()"> <strong>Day 1:</strong> Present Perfect vs Past Simple - <a href="https://test-english.com/" target="_blank">https://test-english.com/</a></li>
+<li><input type="checkbox" class="lesson-check" onclick="updateProgress()"> <strong>Day 2:</strong> Present Perfect Practice Quiz - <a href="https://test-english.com/" target="_blank">https://test-english.com/</a></li>
+<li><input type="checkbox" class="lesson-check" onclick="updateProgress()"> <strong>Day 3:</strong> Conditionals (Zero, First, Second) - <a href="https://test-english.com/" target="_blank">https://test-english.com/</a></li>
+<li><input type="checkbox" class="lesson-check" onclick="updateProgress()"> <strong>Day 4:</strong> Conditionals – Video - <a href="https://test-english.com/" target="_blank">https://test-english.com/</a></li>
+<li><input type="checkbox" class="lesson-check" onclick="updateProgress()"> <strong>Day 5:</strong> Relative Clauses – Updated - <a href="https://test-english.com/grammar-points/b1/defining-and-non-defining-relative-clauses/" target="_blank">https://test-english.com/grammar-points/b1/defining-and-non-defining-relative-clauses/</a></li>
+<li><input type="checkbox" class="lesson-check" onclick="updateProgress()"> <strong>Day 6:</strong> Passive Voice – Updated - <a href="https://learnenglish.britishcouncil.org/grammar/b1-b2-grammar/passives" target="_blank">https://learnenglish.britishcouncil.org/grammar/b1-b2-grammar/passives</a></li>
+<li><input type="checkbox" class="lesson-check" onclick="updateProgress()"> <strong>Day 7:</strong> Grammar Review - <a href="https://test-english.com/" target="_blank">https://test-english.com/</a></li>
+<li><input type="checkbox" class="lesson-check" onclick="updateProgress()"> <strong>Day 8:</strong> Travel Vocabulary – Updated - <a href="https://www.espressoenglish.net/english-travel-vocabulary/" target="_blank">https://www.espressoenglish.net/english-travel-vocabulary/</a></li>
+<li><input type="checkbox" class="lesson-check" onclick="updateProgress()"> <strong>Day 9:</strong> Holidays Vocabulary - <a href="https://test-english.com/" target="_blank">https://test-english.com/</a></li>
+<li><input type="checkbox" class="lesson-check" onclick="updateProgress()"> <strong>Day 10:</strong> Business Vocabulary – Updated - <a href="https://www.espressoenglish.net/business-english-vocabulary/" target="_blank">https://www.espressoenglish.net/business-english-vocabulary/</a></li>
+<li><input type="checkbox" class="lesson-check" onclick="updateProgress()"> <strong>Day 11:</strong> Business Vocabulary Quiz - <a href="https://test-english.com/" target="_blank">https://test-english.com/</a></li>
+<li><input type="checkbox" class="lesson-check" onclick="updateProgress()"> <strong>Day 12:</strong> Phrasal Verbs – Updated - <a href="https://www.perfect-english-grammar.com/phrasal-verbs.html" target="_blank">https://www.perfect-english-grammar.com/phrasal-verbs.html</a></li>
+<li><input type="checkbox" class="lesson-check" onclick="updateProgress()"> <strong>Day 13:</strong> Vocabulary Review - <a href="https://test-english.com/" target="_blank">https://test-english.com/</a></li>
+<li><input type="checkbox" class="lesson-check" onclick="updateProgress()"> <strong>Day 14:</strong> Vocabulary Practice - <a href="https://test-english.com/" target="_blank">https://test-english.com/</a></li>
+<li><input type="checkbox" class="lesson-check" onclick="updateProgress()"> <strong>Day 15:</strong> Listening Practice – Audio Added - <a href="https://elllo.org/english/levels/level4-b1-listening.htm" target="_blank">https://elllo.org/english/levels/level4-b1-listening.htm</a></li>
+<li><input type="checkbox" class="lesson-check" onclick="updateProgress()"> <strong>Day 16:</strong> Listening Quiz - <a href="https://test-english.com/" target="_blank">https://test-english.com/</a></li>
+<li><input type="checkbox" class="lesson-check" onclick="updateProgress()"> <strong>Day 17:</strong> Different Accents – Updated - <a href="https://elllo.org/english/Mixer126.htm" target="_blank">https://elllo.org/english/Mixer126.htm</a></li>
+<li><input type="checkbox" class="lesson-check" onclick="updateProgress()"> <strong>Day 18:</strong> Note-Taking – Updated - <a href="https://www.elllo.org/english/Step/index.html" target="_blank">https://www.elllo.org/english/Step/index.html</a></li>
+<li><input type="checkbox" class="lesson-check" onclick="updateProgress()"> <strong>Day 19:</strong> Listening Comprehension - <a href="https://test-english.com/" target="_blank">https://test-english.com/</a></li>
+<li><input type="checkbox" class="lesson-check" onclick="updateProgress()"> <strong>Day 20:</strong> Listening Video – Updated - <a href="https://www.youtube.com/watch?v=hWzmwCbz6ow" target="_blank">https://www.youtube.com/watch?v=hWzmwCbz6ow</a></li>
+<li><input type="checkbox" class="lesson-check" onclick="updateProgress()"> <strong>Day 21:</strong> Listening Review – Updated - <a href="https://elllo.org/english/levels/level4-b1-listening.htm" target="_blank">https://elllo.org/english/levels/level4-b1-listening.htm</a></li>
+<li><input type="checkbox" class="lesson-check" onclick="updateProgress()"> <strong>Day 22:</strong> Describing Pictures – Updated - <a href="https://www.eslflow.com/describing-pictures-speaking.html" target="_blank">https://www.eslflow.com/describing-pictures-speaking.html</a></li>
+<li><input type="checkbox" class="lesson-check" onclick="updateProgress()"> <strong>Day 23:</strong> Expressing Opinions – Updated - <a href="https://www.englishclub.com/speaking/opinion-expressions.htm" target="_blank">https://www.englishclub.com/speaking/opinion-expressions.htm</a></li>
+<li><input type="checkbox" class="lesson-check" onclick="updateProgress()"> <strong>Day 24:</strong> Role-play Conversations - <a href="https://test-english.com/" target="_blank">https://test-english.com/</a></li>
+<li><input type="checkbox" class="lesson-check" onclick="updateProgress()"> <strong>Day 25:</strong> B1 Speaking Exam – Updated - <a href="https://www.cambridgeenglish.org/learning-english/exams/b1-preliminary/" target="_blank">https://www.cambridgeenglish.org/learning-english/exams/b1-preliminary/</a></li>
+<li><input type="checkbox" class="lesson-check" onclick="updateProgress()"> <strong>Day 26:</strong> Debate Practice - <a href="https://test-english.com/" target="_blank">https://test-english.com/</a></li>
+<li><input type="checkbox" class="lesson-check" onclick="updateProgress()"> <strong>Day 27:</strong> Story Writing – Updated - <a href="https://www.englishclub.com/writing/essays-opinion.htm" target="_blank">https://www.englishclub.com/writing/essays-opinion.htm</a></li>
+<li><input type="checkbox" class="lesson-check" onclick="updateProgress()"> <strong>Day 28:</strong> Speaking Review – Updated - <a href="https://www.youtube.com/watch?v=AxA2FQ4FjUU" target="_blank">https://www.youtube.com/watch?v=AxA2FQ4FjUU</a></li>
+<li><input type="checkbox" class="lesson-check" onclick="updateProgress()"> <strong>Day 29:</strong> Formal & Informal Emails - <a href="https://test-english.com/" target="_blank">https://test-english.com/</a></li>
+<li><input type="checkbox" class="lesson-check" onclick="updateProgress()"> <strong>Day 30:</strong> Opinion Essay – Updated - <a href="https://www.englishclub.com/writing/essays-opinion.htm" target="_blank">https://www.englishclub.com/writing/essays-opinion.htm</a></li>
+
+        </ul>
+        <button onclick="checkLinks()">Check All Links</button><p><a href="index.html">Back to Main Page</a></p>
+    <script>
+    async function checkLinks() {
+        const links = document.querySelectorAll('a[target="_blank"]');
+        for (let link of links) {
+            try {
+                const response = await fetch(link.href, { method: 'HEAD', mode: 'no-cors' });
+                if (!response.ok && response.type !== "opaque") {
+                    link.style.color = 'red';
+                    link.innerHTML += ' (Broken)';
+                } else {
+                    link.style.color = 'green';
+                }
+            } catch (error) {
+                link.style.color = 'orange';
+                link.innerHTML += ' (Check manually)';
+            }
+        }
+    }
+    </script>
+    
+    </main>
+    <footer>
+        <p>&copy; 2025 Dr. Mai's B1 English Course</p>
+    </footer>
+
+<script>
+function searchLessons() {
+    const input = document.getElementById('searchBox').value.toLowerCase();
+    const lessons = document.querySelectorAll('#lessonList li');
+    lessons.forEach(lesson => {
+        const text = lesson.innerText.toLowerCase();
+        lesson.style.display = text.includes(input) ? '' : 'none';
+    });
+}
+
+function updateProgress() {
+    const checkboxes = document.querySelectorAll('.lesson-check');
+    let completed = 0;
+    checkboxes.forEach((checkbox, index) => {
+        if (checkbox.checked) {
+            localStorage.setItem('lesson_' + (index + 1), '1');
+            completed++;
+        } else {
+            localStorage.setItem('lesson_' + (index + 1), '0');
+        }
+    });
+    const total = checkboxes.length;
+    document.getElementById('progressBar').style.width = (completed / total * 100) + "%";
+    document.getElementById('progressText').textContent = completed + " / " + total + " lessons completed";
+}
+
+function loadProgress() {
+    const checkboxes = document.querySelectorAll('.lesson-check');
+    let completed = 0;
+    checkboxes.forEach((checkbox, index) => {
+        const status = localStorage.getItem('lesson_' + (index + 1));
+        if (status === '1') {
+            checkbox.checked = true;
+            completed++;
+        }
+    });
+    const total = checkboxes.length;
+    document.getElementById('progressBar').style.width = (completed / total * 100) + "%";
+    document.getElementById('progressText').textContent = completed + " / " + total + " lessons completed";
+}
+</script>
+<script>window.onload = loadProgress;</script></body>
+</html>

@@ -1,0 +1,46 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head><title>Day 21 Lesson</title></head>
+    <body>
+    <h1>Day 21 Lesson</h1>
+    <p>Access your updated lesson here:</p>
+    <a href="https://elllo.org/english/levels/level4-b1-listening.htm" target="_blank">https://elllo.org/english/levels/level4-b1-listening.htm</a>
+    
+        <h3>Audio Practice</h3>
+        <audio controls>
+            <source src="https://elllo.org/audio/001/001-07-1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        
+        
+        <script>window.onload = function(){loadLessonProgress(21);};</script>
+        <script>
+        function showMotivation(day) {
+            const messages = [
+                "Great job, Dr. Mai! Keep going!",
+                "Excellent work! You're making progress!",
+                "You're doing amazing, keep up the great work!",
+                "Fantastic! Another step towards fluency!",
+                "Bravo! Every lesson counts!"
+            ];
+            const message = messages[Math.floor(Math.random() * messages.length)];
+            alert(message + " You have completed Day " + day + ".");
+        }
+        function updateLessonProgress(day) {
+            const checkbox = document.getElementById("lessonCheck_" + day);
+            if (checkbox.checked) {
+                localStorage.setItem("lesson_" + day, "1");
+                showMotivation(day);
+            } else {
+                localStorage.setItem("lesson_" + day, "0");
+            }
+        }
+        function loadLessonProgress(day) {
+            const status = localStorage.getItem("lesson_" + day);
+            if (status === "1") {
+                document.getElementById("lessonCheck_" + day).checked = true;
+            }
+        }
+        </script>
+        <script>window.onload = function(){loadLessonProgress(21);};</script></body></html>
